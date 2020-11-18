@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-11-18T17:47:33.564Z",
+    "end": "2020-11-18T17:47:55.266Z",
+    "duration": 21702,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "087e71d7-690d-48cd-b859-b3d07f009b41",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6de51296-15db-4258-9f38-2789345ae4dd",
+          "title": "Cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "cadastro de usuário no site",
+              "fullTitle": "Cadastro cadastro de usuário no site",
+              "timedOut": null,
+              "duration": 21550,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('a.login').click();\ncy.get('input#email_create').type(chance.email());\ncy.get('button#SubmitCreate').click();\ncy.get('input#id_gender1').check('1');\ncy.get('input#customer_firstname').type(chance.first());\ncy.get('input#customer_lastname').type(chance.last());\ncy.get('input#passwd').type(chance.hash({\n  length: 8\n}));\ncy.get('select#days').select('1');\ncy.get('select#months').select('12');\ncy.get('select#years').select('1990');\ncy.get('input#newsletter').check('1');\ncy.get('input#optin').check('1');\ncy.get('input#firstname').type(chance.first());\ncy.get('input#lastname').type(chance.last());\ncy.get('input#company').type(chance.company());\ncy.get('input#address1').type(chance.street());\ncy.get('input#address2').type(chance.street({\n  short_suffix: true\n}));\ncy.get('input#city').type(chance.city());\ncy.get('div#uniform-id_state').click({\n  force: true\n});\ncy.get('select#id_state').select('6');\ncy.get('input#postcode').type(chance.zip());\ncy.get('textarea#other').type(chance.sentence({\n  words: 5\n}));\ncy.get('input#phone').type(chance.phone());\ncy.get('input#phone_mobile').type(chance.phone());\ncy.get('input#alias').type(chance.first());\ncy.get('button#submitAccount').click();\ncy.url().should('eq', Cypress.config().baseUrl + 'index.php?controller=my-account');\ncy.get('p[class=\"info-account\"]').should('contain', 'Welcome to your account.');",
+              "err": {},
+              "uuid": "62eb6735-6929-47fb-9b52-75d306999eb9",
+              "parentUUID": "6de51296-15db-4258-9f38-2789345ae4dd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "62eb6735-6929-47fb-9b52-75d306999eb9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21550,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
